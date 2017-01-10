@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<div id="box1"></div>
+		<div id="box2"></div>
+		<script src="react/react.js"></script>
+		<script src="react/react-dom.js"></script>
+		<script src="react/browser.min.js"></script>
+		<script type="text/babel">
+			var H1=React.createClass({
+				render:function(){
+					console.log(this.props)
+					return (
+						
+					)
+				}
+			})
+			var data=["最热电影","最新电影"]
+			var data1=["疯狂动物城","极地大乱斗","邪恶力量"]
+			ReactDOM.render(
+				<H1 {...data} />,
+				document.getElementById("box1")
+			)
+		</script>
+	</body>
+</html>

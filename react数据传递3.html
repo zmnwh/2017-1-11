@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<div id="box"></div>
+		<script src="react/react.js"></script>
+		<script src="react/react-dom.js"></script>
+		<script src="react/browser.min.js"></script>
+		<script type="text/babel">
+			var K1=React.createClass({
+				render:function(){
+					var arr=[];
+					this.props.arr.forEach(function(e,i){
+						arr.push(<li key={i}>{e}</li>)
+					})
+					return (
+						<ul>
+							{arr}
+						</ul>
+					)
+				}
+			})
+			var data={arr:[1,2,3,4]}
+			ReactDOM.render(
+				<K1 {...data}/>,
+				document.getElementById("box")
+			)
+		</script>
+	</body>
+</html>

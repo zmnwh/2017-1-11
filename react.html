@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	<style>
+		.red {
+			color:red;
+		}
+	</style>
+	</head>
+	<body>
+		<div id="box"></div>
+		<div id="box1"></div>
+		<script src="react/react.js"></script>
+		<script src="react/react-dom.js"></script>
+		<script src="react/browser.min.js"></script>
+		<script type="text/babel">
+			var H1=React.createClass({
+				render:function(){
+					return (
+						<div className="red">
+							你好,世界!
+						</div>
+					)
+				}
+			})
+			
+			ReactDOM.render(
+				
+				<H1 />,
+				
+				document.getElementById("box")
+				
+			)
+			
+			
+		</script>
+	</body>
+</html>
